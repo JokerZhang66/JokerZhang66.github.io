@@ -1,0 +1,125 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Barney&#39;s Blog</title>
+        <link>https://JokerZhang66.github.io/</link>
+        <description>Welcome to Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 06 Aug 2022 21:36:15 &#43;0800</lastBuildDate>
+            <atom:link href="https://JokerZhang66.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>博客功能展示</title>
+    <link>https://JokerZhang66.github.io/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA/</link>
+    <pubDate>Wed, 30 Jun 2021 20:21:07 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/img/20211204152837.png" referrerpolicy="no-referrer">
+            </div><p>展示博客主题的相关功能</p>]]></description>
+</item><item>
+    <title>vim入门</title>
+    <link>https://JokerZhang66.github.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Sat, 31 Jul 2021 22:52:40 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[vim基础操作]]></description>
+</item><item>
+    <title>git基础</title>
+    <link>https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/</link>
+    <pubDate>Mon, 02 Aug 2021 12:46:34 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/</guid>
+    <description><![CDATA[持续更新中。。。]]></description>
+</item><item>
+    <title>Python小概念</title>
+    <link>https://JokerZhang66.github.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/</link>
+    <pubDate>Sat, 06 Aug 2022 21:36:15 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/</guid>
+    <description><![CDATA[持续更新中。。。]]></description>
+</item><item>
+    <title>Hugo主题推荐</title>
+    <link>https://JokerZhang66.github.io/hugo%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/</link>
+    <pubDate>Thu, 04 Aug 2022 14:48:25 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/hugo%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/</guid>
+    <description><![CDATA[纯属个人主观推荐]]></description>
+</item><item>
+    <title>Vercel部署本地项目</title>
+    <link>https://JokerZhang66.github.io/vercel%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</link>
+    <pubDate>Sat, 30 Jul 2022 18:56:23 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/vercel%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</guid>
+    <description><![CDATA[vercel导入本地项目]]></description>
+</item><item>
+    <title>git-bash如何使用tmux</title>
+    <link>https://JokerZhang66.github.io/git-bash%E4%BD%BF%E7%94%A8tmux/</link>
+    <pubDate>Fri, 29 Jul 2022 23:41:02 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/git-bash%E4%BD%BF%E7%94%A8tmux/</guid>
+    <description><![CDATA[1.下载并安装msys2下载和安装教程:https://www.msys2.org/ 2.安装成功后运行bash-shell 运行下面的命令安装]]></description>
+</item><item>
+    <title>SpringBoot2.7新建项目Maven下载依赖出错</title>
+    <link>https://JokerZhang66.github.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/</link>
+    <pubDate>Mon, 25 Jul 2022 16:36:15 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/</guid>
+    <description><![CDATA[错误截图 解决方案自行安装本地Maven,IDEA中修改下面红框中的三个位置，分别对应Maven的安装路径、settings.xml位置、本地]]></description>
+</item><item>
+    <title>git简单入门</title>
+    <link>https://JokerZhang66.github.io/github%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/</link>
+    <pubDate>Sat, 23 Jul 2022 23:57:04 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/github%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/</guid>
+    <description><![CDATA[git和github快速上手]]></description>
+</item><item>
+    <title>FL-Market: Trading Private Models in Federated Learning</title>
+    <link>https://JokerZhang66.github.io/paper11/</link>
+    <pubDate>Sat, 25 Jun 2022 15:20:35 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/paper11/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div>FL-Market]]></description>
+</item><item>
+    <title>Optimal Auctions through Deep Learning</title>
+    <link>https://JokerZhang66.github.io/paper10/</link>
+    <pubDate>Sat, 25 Jun 2022 15:07:58 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/paper10/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div>RegretNet]]></description>
+</item><item>
+    <title>ULPT: A User-Centric Location Privacy Trading Framework for Mobile Crowd Sensing</title>
+    <link>https://JokerZhang66.github.io/paper09/</link>
+    <pubDate>Fri, 06 May 2022 22:53:07 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/paper09/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div><p>ULPT框架</p>]]></description>
+</item><item>
+    <title>Locally Differentially Private Protocols for Frequency Estimation</title>
+    <link>https://JokerZhang66.github.io/paper08/</link>
+    <pubDate>Wed, 13 Apr 2022 22:53:07 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/paper08/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div><p>LDP频率估计</p>]]></description>
+</item><item>
+    <title>Nginx安装和卸载</title>
+    <link>https://JokerZhang66.github.io/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%B8%E8%BD%BD/</link>
+    <pubDate>Thu, 17 Mar 2022 23:40:18 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%B8%E8%BD%BD/</guid>
+    <description><![CDATA[安装Nginx1 2 sudo apt-get update sudo apt-get install nginx 卸载Nginx1 2 3 4 sudo apt-get remove nginx nginx-common # 卸载删除除了配置文件以外的所有文件。 sudo apt-get purge nginx nginx-common # 卸载所有东东，包括删除配置]]></description>
+</item><item>
+    <title>修复Uptime Kuma一个小错误</title>
+    <link>https://JokerZhang66.github.io/%E4%BF%AE%E5%A4%8Duptime-kuma%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%94%99%E8%AF%AF/</link>
+    <pubDate>Thu, 17 Mar 2022 19:45:07 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/%E4%BF%AE%E5%A4%8Duptime-kuma%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%94%99%E8%AF%AF/</guid>
+    <description><![CDATA[问题描述 解决方案 在location /中添加下列两行: 1 2 proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection &#34;upgrade&#34;;]]></description>
+</item></channel>
+</rss>

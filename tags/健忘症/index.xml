@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>健忘症 - 标签 - Barney&#39;s Blog</title>
+        <link>https://JokerZhang66.github.io/tags/%E5%81%A5%E5%BF%98%E7%97%87/</link>
+        <description>健忘症 - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 10 Feb 2022 16:19:51 &#43;0800</lastBuildDate><atom:link href="https://JokerZhang66.github.io/tags/%E5%81%A5%E5%BF%98%E7%97%87/" rel="self" type="application/rss+xml" /><item>
+    <title>备忘录</title>
+    <link>https://JokerZhang66.github.io/memo/</link>
+    <pubDate>Thu, 10 Feb 2022 16:19:51 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/memo/</guid>
+    <description><![CDATA[持续更新中]]></description>
+</item></channel>
+</rss>

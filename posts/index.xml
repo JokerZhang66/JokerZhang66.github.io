@@ -1,0 +1,43 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - Barney&#39;s Blog</title>
+        <link>https://JokerZhang66.github.io/posts/</link>
+        <description>所有文章 | Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 06 Aug 2022 21:36:15 &#43;0800</lastBuildDate><atom:link href="https://JokerZhang66.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>git基础</title>
+    <link>https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/</link>
+    <pubDate>Mon, 02 Aug 2021 12:46:34 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/</guid>
+    <description><![CDATA[持续更新中。。。]]></description>
+</item><item>
+    <title>vim入门</title>
+    <link>https://JokerZhang66.github.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Sat, 31 Jul 2021 22:52:40 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[vim基础操作]]></description>
+</item><item>
+    <title>git简单入门</title>
+    <link>https://JokerZhang66.github.io/github%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/</link>
+    <pubDate>Sat, 23 Jul 2022 23:57:04 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/github%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/</guid>
+    <description><![CDATA[git和github快速上手]]></description>
+</item><item>
+    <title>备忘录</title>
+    <link>https://JokerZhang66.github.io/memo/</link>
+    <pubDate>Thu, 10 Feb 2022 16:19:51 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/memo/</guid>
+    <description><![CDATA[持续更新中]]></description>
+</item><item>
+    <title>Ubuntu上使用docker安装mysql</title>
+    <link>https://JokerZhang66.github.io/ubuntu%E4%B8%8A%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85mysql/</link>
+    <pubDate>Mon, 07 Mar 2022 18:01:43 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://JokerZhang66.github.io/ubuntu%E4%B8%8A%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85mysql/</guid>
+    <description><![CDATA[1.docker仓库搜索mysql1 docker search mysql 2.docker仓库拉取mysql8.0镜像1 docker pull mysql:8.0 docker pull mysql #拉取最新版本的mysql 3.查看本地镜]]></description>
+</item></channel>
+</rss>

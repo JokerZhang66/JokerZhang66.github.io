@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">git基础 - Barney&#39;s Blog</title><meta name="Description" content="持续更新中。。。"><meta property="og:title" content="git基础" />
+<meta property="og:description" content="持续更新中。。。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/" /><meta property="og:image" content="https://JokerZhang66.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-02T12:46:34+08:00" />
+<meta property="article:modified_time" content="2022-08-01T12:46:34+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://JokerZhang66.github.io/logo.png"/>
+
+<meta name="twitter:title" content="git基础"/>
+<meta name="twitter:description" content="持续更新中。。。"/>
+<meta name="application-name" content="bnblogs">
+<meta name="apple-mobile-web-app-title" content="bnblogs">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/" /><link rel="prev" href="https://JokerZhang66.github.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/" /><link rel="next" href="https://JokerZhang66.github.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "git基础",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/JokerZhang66.github.io\/git%E5%9F%BA%E7%A1%80\/"
+        },"image": ["https:\/\/JokerZhang66.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "git, github","wordcount":  1946 ,
+        "url": "https:\/\/JokerZhang66.github.io\/git%E5%9F%BA%E7%A1%80\/","datePublished": "2021-08-02T12:46:34+08:00","dateModified": "2022-08-01T12:46:34+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/JokerZhang66.github.io\/images\/avatar.webp",
+                    "width":  528 ,
+                    "height":  560 
+                }},"author": {
+                "@type": "Person",
+                "name": "Barney"
+            },"description": "持续更新中。。。"
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) { document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); }
+        function saveTheme(theme) { window.localStorage && localStorage.setItem('theme', theme); }
+        function getMeta(metaName) { const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return ''; }
+        if (window.localStorage && localStorage.getItem('theme')) { let theme = localStorage.getItem('theme'); theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light'); }
+        let metaColors = { 'light': '#f8f8f8', 'dark': '#252627', 'black': '#000000' }
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <a href="https://github.com/Jokerzhang66" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+        <div class="header-title">
+            <a href="/" title="Barney&#39;s Blog"><img
+        class="lazyload logo"
+        data-src="/images/all/logo.png"
+        data-srcset="/images/all/logo.png, /images/all/logo.png 1.5x, /images/all/logo.png 2x"
+        data-sizes="auto"
+        alt="/images/all/logo.png"
+        title="/images/all/logo.png"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner">
+                
+                <div class="dropdown">
+                    <a href="/posts/" 
+                        class="menu-item menu-more dropbtn" title="" ><i class='fas fa-fw fa-archive'></i> 归档 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/categories/" title="" target="_blank"
+                            rel="noopener" ><i class='fas fa-folder-open'></i> 分类 </a><a href="/tags/" title="" target="_blank"
+                            rel="noopener" ><i class='fas fa-tags'></i> 标签 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-location-arrow"></i> 导航 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/about/" title="" ><i class='fas fa-user'></i> 关于 </a><a href="/message/" title="" ><i class="fas fa-comment"></i> 留言板 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-file-alt"></i> 文档 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://www.zybuluo.com/yangfch3/note/267947#114-%E5%85%AC%E5%BC%8F%E5%86%85%E6%8D%A2%E8%A1%8C" title="" ><i class="fa fa-infinity"></i> Mathjax </a><a href="https://paperswithcode.com/" title="" ><i class="fa fa-file-code"></i> paperswithcode </a><a href="https://docs.python.org/zh-cn/3/tutorial/index.html" title="" ><i class="fab fa-python"></i> python教程 </a><a href="https://www.r2coding.com/#/README" title="" ><i class="fas fa-file"></i> r2coding </a><a href="https://niceseason.github.io/2020/05/18/springboot%E6%A0%B8%E5%BF%83/" title="" ><i class="fab fa-java"></i> Springboot笔记 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-arrow-right"></i> 传送门 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://www.latexlive.com/" title="" ><i class="fas fa-link"></i> Latex公式编辑器 </a><a href="https://zh.d2l.ai/index.html" title="" ><i class="fas fa-link"></i> 动手学深度学习 </a><a href="https://visualgo.net/zh" title="" ><i class="fas fa-link"></i> 算法可视化 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" target="_blank" rel="noopener" ><i class='fas fa-inbox'></i> 镜像站 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://hugo.bnblogs.cc/" title="" target="_blank"
+                            rel="noopener" ><i class="fas fa-blog"></i> bnblogs </a><a href="https://barneys.gitee.io/" title="" target="_blank"
+                            rel="noopener" ><i class="fab fa-goodreads"></i> gitee镜像站 </a><a href="https://barneysblog.vercel.app/" title="" target="_blank"
+                            rel="noopener" ><i class="fas fa-caret-square-up"></i> vercel镜像站 </a></div>
+                </div>
+                <a class="menu-item"
+                    href="https://travellings.link/" 
+                    rel="noopener noreffer" target="_blank" ><i class='fas fa-subway'></i> 开往 
+                </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-desktop">
+                    <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop"
+                        title="搜索">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop"
+                        title="清空">
+                        <i class="fas fa-times-circle fa-fw"></i>
+                    </a>
+                    <span class="search-button search-loading" id="search-loading-desktop">
+                        <i class="fas fa-spinner fa-fw fa-spin"></i>
+                    </span>
+                </span><a href="#" onclick="return false;" class="menu-item theme-select" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <a href="https://github.com/Jokerzhang66" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+            <div class="header-title">
+                <a href="/" title="Barney&#39;s Blog"><img
+        class="lazyload logo"
+        data-src="/images/all/logo.png"
+        data-srcset="/images/all/logo.png, /images/all/logo.png 1.5x, /images/all/logo.png 2x"
+        data-sizes="auto"
+        alt="/images/all/logo.png"
+        title="/images/all/logo.png"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-mobile">
+                    <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile"
+                        title="搜索">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile"
+                        title="清空">
+                        <i class="fas fa-times-circle fa-fw"></i>
+                    </a>
+                    <span class="search-button search-loading" id="search-loading-mobile">
+                        <i class="fas fa-spinner fa-fw fa-spin"></i>
+                    </span>
+                </div>
+                <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                    取消
+                </a>
+            </div>
+            <div class="dropdown">
+                <a href="/posts/" 
+                    class="menu-item menu-more dropbtn" title="" ><i class='fas fa-fw fa-archive'></i> 归档 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/categories/" title="" target="_blank" rel="noopener"
+                        ><i class='fas fa-folder-open'></i> 分类 </a><a href="/tags/" title="" target="_blank" rel="noopener"
+                        ><i class='fas fa-tags'></i> 标签 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-location-arrow"></i> 导航 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/about/" title="" ><i class='fas fa-user'></i> 关于 </a><a href="/message/" title="" ><i class="fas fa-comment"></i> 留言板 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-file-alt"></i> 文档 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://www.zybuluo.com/yangfch3/note/267947#114-%E5%85%AC%E5%BC%8F%E5%86%85%E6%8D%A2%E8%A1%8C" title="" ><i class="fa fa-infinity"></i> Mathjax </a><a href="https://paperswithcode.com/" title="" ><i class="fa fa-file-code"></i> paperswithcode </a><a href="https://docs.python.org/zh-cn/3/tutorial/index.html" title="" ><i class="fab fa-python"></i> python教程 </a><a href="https://www.r2coding.com/#/README" title="" ><i class="fas fa-file"></i> r2coding </a><a href="https://niceseason.github.io/2020/05/18/springboot%E6%A0%B8%E5%BF%83/" title="" ><i class="fab fa-java"></i> Springboot笔记 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-arrow-right"></i> 传送门 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://www.latexlive.com/" title="" ><i class="fas fa-link"></i> Latex公式编辑器 </a><a href="https://zh.d2l.ai/index.html" title="" ><i class="fas fa-link"></i> 动手学深度学习 </a><a href="https://visualgo.net/zh" title="" ><i class="fas fa-link"></i> 算法可视化 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" target="_blank"
+                    rel="noopener" ><i class='fas fa-inbox'></i> 镜像站 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://hugo.bnblogs.cc/" title="" target="_blank" rel="noopener"
+                        ><i class="fas fa-blog"></i> bnblogs </a><a href="https://barneys.gitee.io/" title="" target="_blank" rel="noopener"
+                        ><i class="fab fa-goodreads"></i> gitee镜像站 </a><a href="https://barneysblog.vercel.app/" title="" target="_blank" rel="noopener"
+                        ><i class="fas fa-caret-square-up"></i> vercel镜像站 </a></div>
+            </div>
+            <a class="menu-item"
+                href="https://travellings.link/" 
+                rel="noopener noreffer" target="_blank" ><i class='fas fa-subway'></i> 开往 
+            </a><a href="#" onclick="return false;" class="menu-item theme-select" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#git基本概念">git基本概念</a></li>
+        <li><a href="#git工作流程">git工作流程</a></li>
+        <li><a href="#git常用命令">git常用命令</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">git基础</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://hugo.bnblogs.cc/" title="Author" target="_blank" rel="noopener noreffer author" class="author">Barney</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E6%95%99%E7%A8%8B%E7%AF%87/"><i class="far fa-folder fa-fw"></i>教程篇</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-08-02">2021-08-02</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-08-01">2022-08-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1946 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/git%E5%9F%BA%E7%A1%80/" class="comment_count" data-flag-title="git基础">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="waline-comment-count" id="waline-comment-count"></span>&nbsp;条评论
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#git基本概念">git基本概念</a></li>
+        <li><a href="#git工作流程">git工作流程</a></li>
+        <li><a href="#git常用命令">git常用命令</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="git基本概念" class="headerLink">
+    <a href="#git%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" class="header-mark"></a>git基本概念</h3><center><figure><a class="lightgallery" href="/images/all/git_process.png" title="/images/all/git_process.png" data-thumbnail="/images/all/git_process.png" data-sub-html="<h2>git工作流</h2>">
+        <img
+            class="lazyload"
+            data-src="/images/all/git_process.png"
+            data-srcset="/images/all/git_process.png, /images/all/git_process.png 1.5x, /images/all/git_process.png 2x"
+            data-sizes="auto"
+            alt="/images/all/git_process.png">
+    </a><figcaption class="image-caption">git工作流</figcaption>
+    </figure></center>
+<p>1.<code>工作区</code>(Workspace)：本地存放代码的地方</p>
+<p>2.<code>暂存区</code>(Stage/Index)：数据暂时存放的区域，类似于工作区写入版本库前的缓存区。暂存区是独立于各个分支的。</p>
+<p>3.<code>版本库</code>(Repository)：存放所有已经提交(commit)到本地仓库的代码版本(.git文件夹目录)</p>
+<p>4.<code>版本结构</code>：树结构，树中每个节点代表一个代码版本。</p>
+<p>5.<code>远程仓库</code>(Remote)： 托管代码的服务器(比如Github)</p>
+<h3 id="git工作流程" class="headerLink">
+    <a href="#git%e5%b7%a5%e4%bd%9c%e6%b5%81%e7%a8%8b" class="header-mark"></a>git工作流程</h3><p><code>git</code>的工作流程一般是这样的：</p>
+<p>１、在工作目录中添加、修改文件；</p>
+<p>２、将需要进行版本管理的文件放入暂存区域；</p>
+<p>３、将暂存区域的文件提交到<code>git</code>仓库。</p>
+<p>因此，git管理的文件有三种状态：已修改（<code>modified</code>）,已暂存（<code>staged</code>）,已提交(<code>committed</code>)</p>
+<h3 id="git常用命令" class="headerLink">
+    <a href="#git%e5%b8%b8%e7%94%a8%e5%91%bd%e4%bb%a4" class="header-mark"></a>git常用命令</h3><div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">对于使用多个git平台的用户，建议不要使用全局配置，配置多平台可参考<a href="https://hugo.bnblogs.cc/gitee%E5%92%8Cgit%E5%B9%B6%E5%AD%98/" target="_blank" rel="noopener noreffer">这里</a></div>
+        </div>
+    </div>
+<p>1.<code>git config --global user.name xxx</code>：设置全局用户名，信息记录在<code>~/.gitconfig</code>文件中</p>
+<p>2.<code>git config --global user.email xxx@xxx.com</code>：设置全局邮箱地址，信息记录在<code>~/.gitconfig</code>文件中</p>
+<p>3.<code>git init</code>：将当前目录配置成<code>git</code>仓库，信息记录在隐藏的<code>.git</code>文件夹中</p>
+<p>4.<code>git add XX</code>：将XX文件的变动添加到暂存区</p>
+<ul>
+<li><code>git add .</code>： 会把当前目录及子孙目录里的变动都加到暂存区</li>
+<li><code>git add -A</code>: 会将项目里所有文件的变动都加到暂存区，也就是说该命令不论在项目的哪级目录执行，都有同样的效果。</li>
+</ul>
+<p>5.<code>git rm --cached XX</code>：将文件从仓库索引目录中删掉,表示不再跟踪该文件</p>
+<p>6.<code>git restore --staged XXX</code>: 将XXX从暂存区移除,当该文件还保留在工作区(执行了add命令但后悔了，可以用这个命令将文件从暂存区撤出，但是工作区的修改没有撤销)</p>
+<p>7.<code>git commit -m &quot;给自己看的备注信息&quot;</code>：将暂存区的内容提交到当前分支</p>
+<p>8.<code>git status</code>：查看仓库状态</p>
+<p>9.<code>git diff -- 文件名</code>：查看具体某个文件 在工作区和暂存区之间的差异</p>
+<ul>
+<li><code>git diff -- 文件名1 文件名2 文件名3</code>：查看多个文件在工作区和暂存区之间的差异</li>
+</ul>
+<p>10.<code>git log</code>：查看当前分支的所有版本(从起始点到HEAD)</p>
+<ul>
+<li><code>git log --pretty=oneline</code>: 简化后的日志状态(一行表示一个版本)</li>
+</ul>
+<p>11.<code>git reflog</code>：查看HEAD指针的移动历史（包括被回滚的版本）</p>
+<p>12.<code>git reset --hard HEAD^</code> 或 <code>git reset --hard HEAD~</code>：将代码库回滚到上一个版本</p>
+<ul>
+<li><code>git reset --hard HEAD^^</code>：往上回滚两次，以此类推</li>
+<li><code>git reset --hard HEAD~100</code>：往上回滚<code>100</code>个版本</li>
+<li><code>git reset --hard 版本号</code>：回滚到某一特定版本</li>
+</ul>
+<p>13.<code>git checkout XX</code>或<code>git restore XX</code>：将XX文件尚未加入暂存区的修改全部撤销 (所以用于将文件恢复到上一个版本的状态)</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">对于工作区修改了但是未加入暂存区的文件，使用<code>git status</code>查看文件状态是<code>红色</code>的，
+而加入暂存区未提交的状态是<code>绿色</code>的</div>
+        </div>
+    </div>
+<p>14.<code>git remote add origin git@git.acwing.com:xxx/XXX.git</code>：将本地仓库关联到远程仓库</p>
+<p>15.<code>git push -u</code> (第一次需要<code>-u</code>以后不需要)：将当前分支推送到远程仓库</p>
+<ul>
+<li>带上<code>-u</code>参数其实就相当于记录了<code>push</code>到远端分支的默认值，这样当下次我们还想要继续<code>push</code>的这个远端分支的时候推送命令就可以简写成<code>git push</code>即可</li>
+</ul>
+<p>16.<code>git push origin branch_name</code>：将本地的某个分支推送到远程仓库</p>
+<p>17.<code>git clone git@git.acwing.com:xxx/XXX.git</code>：将远程仓库XXX下载到当前目录下</p>
+<p>18.<code>git branch</code>：查看所有分支和当前所处分支</p>
+<p>19.<code>git branch -d branch_name</code>：删除本地仓库的<code>branch_name</code>分支</p>
+<p>20.<code>git branch branch_name</code>：创建新分支</p>
+<p>21.<code>git checkout branch_name</code>：切换到<code>branch_name</code>这个分支</p>
+<p>22.<code>git checkout -b branch_name</code>：创建并切换到<code>branch_name</code>这个分支</p>
+<p>23.<code>git merge branch_name</code>：将分支<code>branch_name</code>合并到当前分支上</p>
+<p>24.<code>git push --set-upstream origin branch_name</code>：设置本地的<code>branch_name</code>分支对应远程仓库的<code>branch_name</code>分支(在远程创建一个<code>branch_name</code>的新分支并推送过去)</p>
+<p>25.<code>git push -d origin branch_name</code>：删除远程仓库的<code>branch_name</code>分支</p>
+<p>26.<code>git pull</code>：将远程仓库的当前分支与本地仓库的当前分支合并</p>
+<p>27.<code>git pull origin branch_name</code>：将远程仓库的<code>branch_name</code>分支与本地仓库的当前分支合并</p>
+<p>28.<code>git branch --set-upstream-to=origin/branch_name1 branch_name2</code>：将远程的<code>branch_name1</code>分支与本地的<code>branch_name2</code>分支对应</p>
+<p>29.<code>git checkout -t origin/branch_name</code>： 将远程的<code>branch_name</code>分支拉取到本地</p>
+<p>30.<code>git stash</code>：将工作区和暂存区中尚未提交的修改存入栈中</p>
+<ul>
+<li><code>git stash apply</code>：将栈顶存储的修改恢复到当前分支，但不删除栈顶元素</li>
+<li><code>git stash drop</code>：删除栈顶存储的修改</li>
+<li><code>git stash pop</code>：将栈顶存储的修改恢复到当前分支，同时删除栈顶元素</li>
+<li><code>git stash list</code>：查看栈中所有元素</li>
+</ul>
+<p>31.<code>git ls-files</code>：查看暂存区有哪些文件</p>
+<h3 id="参考" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83" class="header-mark"></a>参考</h3><div class="details admonition quote open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-quote-right fa-fw"></i>引用<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">1.<a href="https://www.acwing.com/file_system/file/content/whole/index/content/2932078/" target="_blank" rel="noopener noreffer">https://www.acwing.com/file_system/file/content/whole/index/content/2932078/</a>
+2.<a href="https://www.cnblogs.com/qdhxhz/p/9757390.html" target="_blank" rel="noopener noreffer">https://www.cnblogs.com/qdhxhz/p/9757390.html</a></div>
+        </div>
+    </div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-08-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/git%E5%9F%BA%E7%A1%80/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span><span>|&nbsp;<a class="link-to-source" href=https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/posts\git基础.md target="_blank" rel="noopener noreferrer">查看源代码</a>
+                    </span><span>|&nbsp;<a class="link-to-edit" href=https://github.com/HEIGE-PCloud/DoIt/edit/main/exampleSite/content/posts\git基础.md target="_blank" rel="noopener noreferrer">编辑此页</a>
+                    </span><span>|&nbsp;<a class="link-to-report" href=https://github.com/HEIGE-PCloud/DoIt/issues/new?title=[bug]%20git%E5%9F%BA%E7%A1%80&body=|Field|Value|%0A|-|-|%0A|Title|git%E5%9F%BA%E7%A1%80|%0A|Url|https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/|%0A|Filename|https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/posts\git基础.md| target="_blank" rel="noopener noreferrer">报告问题</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/" data-title="git基础" data-hashtags="git,github"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Facebook" data-sharer="facebook" data-url="https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/" data-hashtag="git"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/" data-title="git基础"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Line" data-sharer="line" data-url="https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/" data-title="git基础"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" onclick="return false;" title="分享到 微博" data-sharer="weibo" data-url="https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/" data-title="git基础" data-ralateuid="6289381214"><i class="fab fa-weibo fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://JokerZhang66.github.io/git%E5%9F%BA%E7%A1%80/" data-title="git基础" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/github/">github</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/python%E5%B0%8F%E6%A6%82%E5%BF%B5/" class="prev" rel="prev" title="Python小概念"><i class="fas fa-angle-left fa-fw"></i>Python小概念</a>
+            <a href="/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/" class="next" rel="next" title="vim入门">vim入门<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="waline" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+    <div class="footer-container">
+        <div class="footer-line">
+            <span id="run-time"></span>
+        </div><div class="footer-line">
+            由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer"
+            title="Hugo 0.96.0">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a> 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank"
+            rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+        </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a
+                    href="https://hugo.bnblogs.cc/" target="_blank"
+                    rel="noopener noreferrer">Barney</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+    <div class="footer-line">
+    </div>
+    </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a>
+
+        <a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script async defer data-website-id="4a63ddaf-d146-42f4-8145-7d0ef7f7b2a4" src="https://umami.bnblogs.cc/umami.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"waline":{"commentCount":true,"copyright":true,"dark":"body[theme='dark'], body[theme='black']","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji"],"highlight":true,"lang":"zh-cn","login":"enable","meta":["nick","mail","link"],"pageSize":100,"requiredMeta":["nick","mail"],"serverURL":"https://my-waline-one.vercel.app"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"desktop-header-typeit":"Barney's Blog","mobile-header-typeit":"Barney's Blog"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"sharerjs":true,"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":0,"speed":100}};</script><script type="text/javascript" src="/lib/waline/Waline.min.js" defer></script><script type="text/javascript" src="/js/waline.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div></body>
+
+</html>
